@@ -1,5 +1,6 @@
 # Project-01-AstroWhisper
 
+
 ## Challenge 
 
 Develop a web application that offers horoscope for users based on their date of birth. User can also find out their fortune for today.
@@ -38,5 +39,3 @@ The screen of the second page of the web application features:
 
 https://bulma.io/documentation/start/responsiveness/
 https://www.vecteezy.com/free-vector/horoscope-icon
-
-
