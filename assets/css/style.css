@@ -1,0 +1,60 @@
+.header {
+    margin-top: 18vh;
+    display: flex;
+    justify-content: center;
+}
+
+.title {
+    font-size: 6em;
+    color: white;
+    font-family: "Bungee Shade", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.card-form {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    background-color: #0000ff2a; 
+    color: white;
+    border-radius: 3%;
+    
+}
+
+.hero {
+    background-image: url(../numerology-concept-composition.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.card {
+    background-color: #0000ff2a; 
+    border-color: 3px rgba(255, 0, 255, 0.692);
+    
+}
+
+.card-header-title {
+    color: white;
+    font-size: 2em;
+    font-family: "Anta", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-left: 7px;
+}
+
+.label {
+    color: white; 
+    font-family: "Anta", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.4em;
+}
+
+.button is-primary {
+    background-color: pink;
+}
