@@ -39,3 +39,4 @@ The screen of the second page of the web application features:
 
 https://bulma.io/documentation/start/responsiveness/
 https://www.vecteezy.com/free-vector/horoscope-icon
+

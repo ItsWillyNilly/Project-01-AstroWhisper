@@ -4,38 +4,41 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Links to the googlefonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anta&family=VT323&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/css/style.css">
+
     <link rel="stylesheet" href="./assets/css/card.css">
     <title>Horoscope Card Page</title>
 </head>
 
 <body>
     <div class="hero">
-        <header>
-
-        </header>
+        <div class="header">
+            <h1><span>HOROSCOPE</span></h1>
+            <nav class="header" aria-label="navigation-bar">
+                <a id="back" href="./index.html">Back</a>
+                <button id="toggle"></button>
+            </nav>
+        </div>
 
         <main>
-
 
         </main>
 
         <footer>
             <div class="panel-footer">
-                <h5><span>Made with by The Lazy Loaders Team</span></h5>
+                <h5><span>Made by The Lazy Loaders Team, 2024</span></h5>
             </div>
         </footer>
-
-
     </div>
 
-
-
-    <script src="./assets/js/script.js"></script>
-    <script src="./assets/js/card.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <script src="https://unpkg.com/dayjs@1.8.21/plugin/isBetween.js"></script>
+    <script src="assets/js/card.js"></script>
 </body>
-
 </html>

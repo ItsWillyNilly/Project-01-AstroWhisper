@@ -1,3 +1,13 @@
+/*CSS fr hero*/
+.hero {
+    background-image: url(../numerology-concept-composition.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+/*CSS for header*/
 .header {
     margin-top: 18vh;
     display: flex;
@@ -12,6 +22,7 @@
     font-style: normal;
 }
 
+/*CSS for card-form*/
 .card-form {
     position: fixed;
     bottom: 0;
@@ -20,22 +31,12 @@
     margin-left: 30px;
     background-color: #0000ff2a; 
     color: white;
-    border-radius: 3%;
-    
-}
-
-.hero {
-    background-image: url(../numerology-concept-composition.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100vh;
+    border-radius: 3%;  
 }
 
 .card {
     background-color: #0000ff2a; 
-    border-color: 3px rgba(255, 0, 255, 0.692);
-    
+    border-color: 3px #ff00ffb0; 
 }
 
 .card-header-title {
@@ -55,6 +56,10 @@
     font-size: 1.4em;
 }
 
-.button is-primary {
-    background-color: pink;
+/*CSS for button*/
+.button.is-primary {
+    background-color: #ff00ffb0;
+    color: white;
+    font-size: 17px;
+    font-family: "Anta", sans-serif;
 }
