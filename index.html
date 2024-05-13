@@ -11,6 +11,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anta&family=VT323&display=swap" rel="stylesheet">
+  <!--Links to CSS-->
+  <link rel="stylesheet" href="./assets/css/global.css">
   <link rel="stylesheet" href="./assets/css/style.css">
   <title>Astro Whisper Web Application</title>
 </head>
@@ -36,10 +38,10 @@
                 <div class="field">
                   <label class="label">User Name</label>
                   <div class="control">
-                    <input class="input" type="name" name="name">
+                    <input class="input" type="name" id="userName">
                     <label class="label">Date of Birth</label>
                     <div class="control">
-                      <input class="input" type="date" name="date">
+                      <input class="input" type="date" id="birthdayDate">
                     </div>
                   </div>
                 </div>
@@ -47,7 +49,7 @@
                 <!--Button-->
                 <footer class="card-footer">
                   <div class="has-text-centered"></div>
-                  <button class="button is-primary">Reveal</button>
+                  <button type="submit" id="revealButton" class="button is-primary">Reveal</button>
                 </footer>
               </div>
             </div>
