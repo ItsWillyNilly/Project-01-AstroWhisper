@@ -1,0 +1,27 @@
+/*CSS variables*/
+:root {
+    --dark-blue: #0000ff2a;
+    --white: white;
+    --pink: #ff00ffb0; 
+    --bungee: "Bungee Shade", sans-serif;
+    --anta: "Anta", sans-serif;
+}
+
+/*CSS for hero*/
+.hero {
+    background-image: url(../numerology-concept-composition.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+/*Responsive design*/
+@media screen and (max-width: 768px) {
+    header,
+    nav,
+    main,
+    footer {
+        flex-direction: column;
+    }
+}
