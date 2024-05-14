@@ -1,17 +1,17 @@
 const isBetween = window.dayjs_plugin_isBetween;
-    dayjs.extend(isBetween);
+dayjs.extend(isBetween);
 // this file will contain the JS for card.html
 const user = JSON.parse(localStorage.getItem('birthday'));
-const signs = JSON.parse(localStorage.getItem('zodiacsign'));
+const signs = JSON.parse(localStorage.getItem('zodiacSign'));
 
 console.log(signs);
 
 const options = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': 'b3f4ad0488msh25707697dd3120ap175263jsnbbef9125d64d',
-		'X-RapidAPI-Host': 'zodiac-sign-api1.p.rapidapi.com'
-	}
+    method: 'GET',
+    headers: {
+        'X-RapidAPI-Key': 'b3f4ad0488msh25707697dd3120ap175263jsnbbef9125d64d',
+        'X-RapidAPI-Host': 'zodiac-sign-api1.p.rapidapi.com'
+    }
 };
 
 const zodiacSigns = {
@@ -32,30 +32,31 @@ const zodiacSigns = {
 async function getZodiacSign() {
     for (const sign in zodiacSigns) {
         const [startDate, endDate] = zodiacSigns[sign];
-        if (dayjs(dayjs(user.birthday)).isBetween(startDate, endDate, 'day', '[)')) {
+        if (dayjs(dayjs(user.birthday)).isBetween(startDate, endDate, 'day', '[]')) {
             console.log('sign', sign);
         }
     }
     return null;
 }
 
-    // Example usage:
-    getZodiacSign();
+// Example usage:
+getZodiacSign();
 
 // function to create the card and display the data
 function createCard(data) {
 
     let horoscope = `<div class="card">
-            <h2>${data.username} your Zodiac sign is...</h2>
+            <h2>${data.userName} your Zodiac sign is...</h2>
             <h2>${determineZodiac()}</h2> 
 
             <h2>Fortune<h2>
+            
             <p>${generateFortune()}</p>        
     </div>`
-    
+
     const element = document.createElement('div');
     element.innerHTML = horoscope;
-    
+
     document.body.appendChild(element.firstChild);
 }
 

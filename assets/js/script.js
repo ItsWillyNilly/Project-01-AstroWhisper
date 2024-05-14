@@ -1,7 +1,7 @@
 //this JS file will contain all the code for the index.html file
-const submitButton = document.querySelector('#submit');
-const usernameInput = document.querySelector('#username');
-const birthdayInput = document.querySelector('#date');
+const submitButton = document.querySelector('#revealButton');
+const usernameInput = document.querySelector('#userName');
+const birthdayInput = document.querySelector('#birthdayDate');
 
 //function to take user input and store it in local storage
 submitButton.addEventListener('click', function (event) {
