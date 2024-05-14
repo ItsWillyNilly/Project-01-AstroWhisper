@@ -43,19 +43,36 @@ async function getZodiacSign() {
 getZodiacSign();
 
 // function to create the card and display the data
-function createCard(data) {
+function createCard() {
 
-    let horoscope = `<div class="card">
-            <h2>${data.userName} your Zodiac sign is...</h2>
-            <h2>${determineZodiac()}</h2> 
+    // let horoscope = `<div class="card">
+    //         <h2>${data.userName} your Zodiac sign is...</h2>
+    //         <h2>${determineZodiac()}</h2> 
 
-            <h2>Fortune<h2>
+    //         <h2>Fortune<h2>
             
-            <p>${generateFortune()}</p>        
-    </div>`
+    //         <p>${generateFortune()}</p>        
+    // </div>`
+
+    // const element = document.createElement('div');
+    // element.innerHTML = horoscope;
+
+    // document.body.appendChild(element.firstChild);
+
+    const userData = JSON.parse(localStorage.getItem('user'));
+    if (userData) {
+      const cardHTML = `
+        <div class="card">
+          <h2>${userData.username}</h2>
+          <p>${getZodiacSign}</p>
+          <p>${generateFortune}</p>
+        </div>
+      `;
+      document.getElementById('card-container').innerHTML = cardHTML;
+    }
 
     const element = document.createElement('div');
-    element.innerHTML = horoscope;
+    element.innerHTML = cardHTML;
 
     document.body.appendChild(element.firstChild);
 }
