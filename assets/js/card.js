@@ -45,6 +45,7 @@ async function getZodiacSign() {
 
 // function to create the card and display the data
 function createCard() {
+
     console.log("hi");
     const userSign = localStorage.getItem("sign");
     const userFortune = localStorage.getItem("Fortune");
