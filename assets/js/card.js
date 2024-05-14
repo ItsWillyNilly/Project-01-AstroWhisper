@@ -61,7 +61,49 @@ function createCard(data) {
 }
 
 // function to generate a fortune using a fortune API
-function generateFortune() {
-    
+async function generateFortune() {
+
+    const url = 'https://fortunecookie.p.rapidapi.com/api/v1/fortune';
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': '39d4e0a90dmsh7b651e8c7a3c32cp19dfa1jsn25d4bc166674',
+		'X-RapidAPI-Host': 'fortunecookie.p.rapidapi.com'
+	}
+};
+
+try {
+	const response = await fetch(url, options);
+	const result = await response.text();
+	console.log(result);
+} catch (error) {
+	console.error(error);
 }
 
+    // const options = {
+    //     method: 'GET',
+    //     url: 'https://fortunecookie.p.rapidapi.com/api/v1/fortune',
+    //     headers: {
+    //       'X-RapidAPI-Key': '39d4e0a90dmsh7b651e8c7a3c32cp19dfa1jsn25d4bc166674',
+    //       'X-RapidAPI-Host': 'fortunecookie.p.rapidapi.com'
+    //     }
+    //   };
+     
+    //   try {
+        // fetch ('https://fortunecookie.p.rapidapi.com/api/v1/fortune')
+        //   const response = fetch(url,options);
+        //   const data = response.json();
+        // .then (res => res.json())
+        // .then (data => {
+          
+        //   console.log(data);
+          
+        //   return data.fortune.message;
+
+        //  }) catch (error) {
+        //   console.error(error);
+    //   });
+
+    }
+
+    generateFortune();
