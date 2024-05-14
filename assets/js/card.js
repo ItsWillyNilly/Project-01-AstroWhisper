@@ -34,30 +34,51 @@ async function getZodiacSign() {
         const [startDate, endDate] = zodiacSigns[sign];
         if (dayjs(dayjs(user.birthday)).isBetween(startDate, endDate, 'day', '[]')) {
             console.log('sign', sign);
+            localStorage.setItem('sign', sign);
         }
     }
-    return null;
+    // return null;
 }
 
 // Example usage:
-getZodiacSign();
+// getZodiacSign();
 
 // function to create the card and display the data
-function createCard(data) {
+function createCard() {
+    console.log("hi");
+    const userSign = localStorage.getItem("sign");
+    const userFortune = localStorage.getItem("Fortune");
+    const userData = JSON.parse(localStorage.getItem('birthday'));
+    console.log(userData);
+    if (userData) {
+        console.log("hell0", userData);
+      const cardHTML = `
+        <div class="card">
+          <h2>${userData.username}</h2>
+           <p>${userSign}</p>
+          <p>${userFortune}</p>
+        </div>
+      `;
+    //   document.getElementById('card-container').innerHTML = cardHTML;
+    
 
-    let horoscope = `<div class="card">
-            <h2>${data.userName} your Zodiac sign is...</h2>
-            <h2>${determineZodiac()}</h2> 
-
-            <h2>Fortune<h2>
+    // let horoscope = `<div class="card">
             
-            <p>${generateFortune()}</p>        
-    </div>`
+    //         <h2>${getZodiacSign()}</h2> 
 
-    const element = document.createElement('div');
-    element.innerHTML = horoscope;
+    //         <h2>Fortune<h2>
+            
+    //         <p>${generateFortune()}</p>        
+    // </div>`
 
-    document.body.appendChild(element.firstChild);
+    const fortuneElement = document.querySelector(".fortune-card");
+    // const element = document.createElement('div')
+    // element.innerHTML = cardHTML;
+    console.log(cardHTML);
+    
+fortuneElement.innerHTML=cardHTML;
+    // document.body.main.appendChild(cardHTML);
+}
 }
 
 // function to generate a fortune using a fortune API
@@ -75,7 +96,11 @@ const options = {
 try {
 	const response = await fetch(url, options);
 	const result = await response.text();
-	console.log(result);
+    const fortune = JSON.parse(result);
+    
+	console.log(JSON.parse(result));
+    localStorage.setItem("Fortune",fortune.message);
+    
 } catch (error) {
 	console.error(error);
 }
@@ -107,3 +132,5 @@ try {
     }
 
     generateFortune();
+    getZodiacSign();
+createCard();
