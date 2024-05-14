@@ -10,13 +10,13 @@ submitButton.addEventListener('click', function (event) {
     let birthday = JSON.parse(localStorage.getItem('birthday')); 
 
     // create user object when the user clicks on the submit button
-      user = {
+      const user = {
         username: usernameInput.value.trim(),
         birthday: birthdayInput.value.trim(),
       };
 
       // stores the input into local storage
-      localStorage.setItem('birthday', JSON.stringify(birthday));
+      localStorage.setItem('birthday', JSON.stringify(user));
   
       window.location="card.html";
 });
@@ -35,6 +35,7 @@ function testing() {
   .then(response=>response.json())
     .then(data=>{
       console.log(data);
+      localStorage.setItem("zodiacsign", JSON.stringify(data))
     }) 
     .catch(err=>console.log(err))
 }

@@ -61,27 +61,7 @@ function createCard(data) {
 }
 
 // function to generate a fortune using a fortune API
-
-//API fortune cookie: https://rapidapi.com/webchest.io/api/fortunecookie/
-
 function generateFortune() {
-    const queryUrl = "https://rapidapi.com/webchest.io/api/fortunecookie/"
-
-    fetch(queryURL)
-        .then(function (response) {
-            if (!response.ok) {
-                throw new Error('Fortune not found');
-            }
-            return response.json();
-        }
-        )
-
-        .then(function (data) {
-            console.log(data);
-        }
-        )
-
-
-
-
+    
 }
+
