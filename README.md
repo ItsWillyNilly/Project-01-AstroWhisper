@@ -13,11 +13,7 @@ The final app integrates astrology insights based on user's zodiac sign (particu
 
 1. Logoname & Background Image
 
-<<<<<<< HEAD
-Our logoname "AstroWhisper" and backgroubd image perfectly capture the essence of our astrological web application. The primary goal is to create a unique design for entertaining application conserning horoscope to attract users.
-=======
 Our logoname "Astro Whisper" and backgroubd image perfectly capture the essence of our astrological web application. The primary goal is to create a unique design for entertaining application conserning horoscope to attract users.
->>>>>>> e43437d7c938c75c3384fb71caf6ba2b7cecc4fe
 
 2. Screen of the web application
 
@@ -26,11 +22,6 @@ The screen of the second page of the web application features:
      (i) a card representing the zodiac (moon) sign of user and horoscope;
      (ii) "fortune" button and a brief fortune forecast for the day (window pops up by clicking the "fortune" button).
 
-<<<<<<< HEAD
-3. Images /TO BE ADDED/
-
-4. Responsive design /TO BE ADDED/
-=======
 3. Styling done through custom CSS. Also, CSS variables are used for the background color, font-style and color of font.
 
 3. Images /TO BE ADDED/
@@ -38,7 +29,6 @@ The screen of the second page of the web application features:
 4. Responsive design
 
 Fully responsive by using media queries.
->>>>>>> e43437d7c938c75c3384fb71caf6ba2b7cecc4fe
 
 ## Screenshots 
 /TO BE ADDED/
@@ -51,10 +41,6 @@ Fully responsive by using media queries.
 
 ## Technology used
 
-<<<<<<< HEAD
-https://bulma.io/documentation/start/responsiveness/
-https://www.vecteezy.com/free-vector/horoscope-icon
-=======
 1. Third-parties APIs:
 https://bulma.io/documentation/start/responsiveness/
 https://day.js.org/
@@ -67,4 +53,3 @@ https://www.vecteezy.com/free-vector/horoscope-icon
 https://fonts.google.com/
 
 
->>>>>>> e43437d7c938c75c3384fb71caf6ba2b7cecc4fe
