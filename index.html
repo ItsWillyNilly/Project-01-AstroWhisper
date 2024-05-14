@@ -24,8 +24,39 @@
       <h1 class="title"><span>Astro Whisper</span></h1>
     </header>
 
+    <button class="js-modal-trigger" data-target="modal-js-button">
+      What's your sign and fortune?
+    </button>
+    <div class="modal hidden" id="modal-js-button">
+      <div class="modal-background"></div>
+      <div class="modal-card">
+        <header class="modal-card-head">
+          <p class="modal-card-title">
+            <span>Get started !</span>
+          </p>
+          <button class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+          <div class="field">
+            <label class="label">User Name</label>
+            <div class="control">
+              <input class="input" type="name" id="userName">
+              <label class="label">Date of Birth</label>
+              <div class="control">
+                <input class="input" type="date" id="birthdayDate">
+              </div>
+            </div>
+          </div>
+        </section>
+        <footer class="modal-card-foot">
+          <button class="button is-success">Reveal</button>
+          <button class="button">Cancel</button>
+        </footer>
+      </div>
+    </div>
+
     <!--Card form-->
-    <div class="card-form" style="width: 400px;">
+    <!-- <div class="card-form" style="width: 400px;">
       <div class="columns is-mobile is-multiline is-vcentered">  
           <div class="card" style="width: 100%;">
             <header class="card-header">
@@ -46,8 +77,8 @@
                   </div>
                 </div>
 
-                <!--Button-->
-                <footer class="card-footer">
+                <!-Button-->
+                <!-- <footer class="card-footer">
                   <div class="has-text-centered"></div>
                   <button type="submit" id="revealButton" class="button is-primary">Reveal</button>
                 </footer>
@@ -63,14 +94,10 @@
         </div>
       </div>
     </div>
-  </div>
-<<<<<<< HEAD
-  <script src='assets/js/script.js'></script>
-=======
+  </div> --> 
 
   <script src='assets/js/script.js'></script>
   <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
-  <script>dayjs().format()</script>
->>>>>>> e43437d7c938c75c3384fb71caf6ba2b7cecc4fe
+  
 </body>
 </html>
