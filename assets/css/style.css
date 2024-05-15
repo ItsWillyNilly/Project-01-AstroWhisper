@@ -1,6 +1,7 @@
 /*CSS for header*/
 .header {
-    margin-top: 18vh;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
     display: flex;
     justify-content: center;
 }
@@ -13,24 +14,31 @@
     font-style: normal;
 }
 
-/*CSS for card-form*/
-.card-form {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    margin-bottom: 20px;
-    margin-left: 30px;
+/*CSS for trigger button*/
+.js-modal-trigger {
+    display: flex;
+    justify-content: center;
+    margin-top: 10vh;
+    margin-bottom: 50vh;
+    margin-left: 70vh;
+    margin-right: 70vh;
     background-color: var(--dark-blue); 
+    border-radius: 45%; 
+    border-color: 40px var(--white);
+    padding: 30px 5px 30px 5px;
     color: var(--white);
-    border-radius: 3%;  
+    font-size: 2em;
+    font-family: var(--anta);
+    font-weight: 400;
+    font-style: normal;
 }
 
-.card {
-    background-color: var(--dark-blue); 
-    border-color: 3px var(--pink); 
+/*CSS for modal*/
+.modal-card-head {
+    background-color: var(--pink);
 }
 
-.card-header-title {
+.modal-card-title {
     color: var(--white);
     font-size: 2em;
     font-family: var(--anta);
@@ -40,17 +48,38 @@
 }
 
 .label {
-    color: var(--white); 
+    color: var(--pink); 
     font-family: var(--anta);
     font-weight: 400;
     font-style: normal;
     font-size: 1.4em;
 }
 
-/*CSS for button*/
-.button.is-primary {
+.modal-card-body {
+    background-color: var(--dark-blue); 
+}
+
+/*CSS for footer*/
+.modal-card-foot {
     background-color: var(--pink);
     color: var(--white);
     font-size: 17px;
     font-family: var(--anta);
 }
+
+.button.is-success {
+    background-color: var(--dark-blue);
+    color: var(--white);
+    font-size: 17px;
+    font-family: var(--anta);
+    border-color: 40px var(--white);
+}
+
+.button {
+    background-color: var(--dark-blue);
+    color: var(--white);
+    font-size: 17px;
+    font-family: var(--anta);
+}
+
+

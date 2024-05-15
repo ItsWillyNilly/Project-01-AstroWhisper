@@ -9,7 +9,7 @@
 
 /*CSS for hero*/
 .hero {
-    background-image: url(../numerology-concept-composition.jpg);
+    background-image: url(../images/numerology-concept-composition.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -19,6 +19,7 @@
 /*Responsive design*/
 @media screen and (max-width: 768px) {
     header,
+    .js-modal-trigger,
     nav,
     main,
     footer {

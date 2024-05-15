@@ -3,7 +3,8 @@
 
 <head>
   <!--Link to Bulma-->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"><!--CHECK WHAT LINK-->
+  <link rel="stylesheet" href="https://versions.bulma.io/0.7.0/documentation/components/modal/">
   <!--Links to the googlefonts-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,45 +25,40 @@
       <h1 class="title"><span>Astro Whisper</span></h1>
     </header>
 
-    <!--Card form-->
-    <div class="card-form" style="width: 400px;">
-      <div class="columns is-mobile is-multiline is-vcentered">  
-          <div class="card" style="width: 100%;">
-            <header class="card-header">
-              <p class="card-header-title">
-                <span>Get started !</span>
-              </p>
-            </header>
-            <div class="card-content">
-              <div class="content">
-                <div class="field">
-                  <label class="label">User Name</label>
-                  <div class="control">
-                    <input class="input" type="name" id="userName">
-                    <label class="label">Date of Birth</label>
-                    <div class="control">
-                      <input class="input" type="date" id="birthdayDate">
-                    </div>
-                  </div>
-                </div>
+    <button class="js-modal-trigger" data-target="modal-js-button">
+      Get started!
+    </button>
 
-                <!--Button-->
-                <footer class="card-footer">
-                  <div class="has-text-centered"></div>
-                  <button type="submit" id="revealButton" class="button is-primary">Reveal</button>
-                </footer>
+    <div class="modal hidden" id="modal-js-button"> 
+      <div class="modal-background"></div> 
+      <div class="modal-card"> 
+        <header class="modal-card-head">
+          <p class="modal-card-title">
+            <span>What's your zodiac sign?</span>
+          </p>
+          <button class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+          <div class="field">
+            <label class="label">User Name</label>
+            <div class="control">
+              <input class="input" type="name" id="userName">
+              <label class="label">Date of Birth</label>
+              <div class="control">
+                <input class="input" type="date" id="birthdayDate">
               </div>
             </div>
-
           </div>
-          <footer class="card-footer">
-            <div class="has-text-centered"></div>
-            <button id="submit" class="button is-primary">Reveal</button>
-            
-          </footer>
-        </div>
+        </section>
+         
+        <footer class="modal-card-foot">
+          <button class="button is-success">Reveal</button>
+          <button class="button">Cancel</button>
+        </footer>
       </div>
     </div>
+
+    
   </div>
 
   <script src='assets/js/script.js'></script>
