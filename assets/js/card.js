@@ -5,8 +5,7 @@ const user = JSON.parse(localStorage.getItem('birthday'));
 const signs = JSON.parse(localStorage.getItem('zodiacsign'));
 
 console.log(signs);
-
-//Log the signs to the console for debugging purposes
+// Log the signs to the console for debugging purposes
 const options = {
     method: 'GET',
     headers: {
@@ -14,8 +13,7 @@ const options = {
         'X-RapidAPI-Host': 'zodiac-sign-api1.p.rapidapi.com'
     }
 };
-
-//Define an object to store the zodiac sign and the corresponding date ranges
+// Define an object to store the zodiac signs and their corresponding date ranges
 const zodiacSigns = {
     'Aquarius': [dayjs('2024-01-20'), dayjs('2024-02-18')],
     'Pisces': [dayjs('2024-02-19'), dayjs('2024-03-20')],
@@ -30,7 +28,6 @@ const zodiacSigns = {
     'Sagittarius': [dayjs('2024-11-22'), dayjs('2024-12-21')],
     'Capricorn': [dayjs('2024-12-22'), dayjs('2025-01-19')]
 };
-
 // Async function to get the user's zodiac sign based on their birthdate
 async function getZodiacSign() {
     const signs = JSON.parse(localStorage.getItem('zodiacsign'));
@@ -45,8 +42,7 @@ async function getZodiacSign() {
         }
     }
 }
-
-// function to create the card and display the data
+// Function to create a card element with the user's information
 function createCard() {
 
     console.log("hi");
@@ -57,7 +53,7 @@ function createCard() {
 
     console.log(userData);
     if (userData) {
-        console.log("hell0", userData);
+        console.log("hello", userData);
         const cardHTML = `
         <div class="card">
           <div><h2>Hi,${userData.username}! Your sign is:</h2>
@@ -81,7 +77,7 @@ function createCard() {
     }
 }
 
-// function to generate a fortune using a fortune API
+// Async function to generate a fortune using the Fortune Cookie API
 async function generateFortune() {
 
     const url = 'https://fortunecookie.p.rapidapi.com/api/v1/fortune';
@@ -104,8 +100,10 @@ async function generateFortune() {
     } catch (error) {
         console.error(error);
     }
+
+
 }
-// Call the functions to generate the fortune
+// Call the functions to generate the fortune 
 generateFortune();
 //call the function to get the user's zodiac sign
 getZodiacSign();
