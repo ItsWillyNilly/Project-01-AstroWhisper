@@ -46,46 +46,40 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
-<<<<<<< HEAD
-=======
-
-// function testing() {
-//   const url = 'https://zodiac-sign-api1.p.rapidapi.com/all';
-//   const options = {
-// 	method: 'GET',
-// 	headers: {
-// 		'X-RapidAPI-Key': 'b3f4ad0488msh25707697dd3120ap175263jsnbbef9125d64d',
-// 		'X-RapidAPI-Host': 'zodiac-sign-api1.p.rapidapi.com'
-// 	}
-// };
-
-//   fetch(url, options)
-//   .then(response=>response.json())
-//     .then(data=>{
-//       console.log(data);
-//       localStorage.setItem("zodiacsign", JSON.stringify(data))
-//     }) 
-//     .catch(err=>console.log(err))
-// }
 
 
-//testing();
+function testing() {
+  const url = 'https://zodiac-sign-api1.p.rapidapi.com/all';
+  const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': 'b3f4ad0488msh25707697dd3120ap175263jsnbbef9125d64d',
+		'X-RapidAPI-Host': 'zodiac-sign-api1.p.rapidapi.com'
+	}
+};
+
+  fetch(url, options)
+  .then(response=>response.json())
+    .then(data=>{
+      console.log(data);
+      localStorage.setItem("zodiacsign", JSON.stringify(data))
+    }) 
+    .catch(err=>console.log(err))
+}
+
+
+testing();
 
 /*Add functionality for the trigger button */
+var triggerButtons = document.querySelector('.js-modal-trigger');
+triggerButtons.addEventListener('click', function() {
 
-document.addEventListener('DOMContentLoaded', function() {
-  var triggerButtons = document.querySelectorAll('.js-modal-trigger');
-
-  triggerButtons.forEach(function(button) {
-    button.addEventListener('click', function() {
-      var target = button.getAttribute('data-target');
-      var modal = document.getElementById(target);
-
+      var modal = document.getElementById('modal-js-button');
+  
       if (modal) {
-        modal.classList.remove('hidden'); // Remove the "hidden" class to show the modal
+        modal.classList.remove('hidden'); 
         modal.classList.add('is-active');
       }
-    });
   });
 
   // Close modal when close button is clicked
@@ -99,6 +93,4 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
-});   
-
->>>>>>> f0d9ae6b3e3812c9256e1fbddccef2cd3819b11b
+   

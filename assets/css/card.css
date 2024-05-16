@@ -44,10 +44,30 @@ WHEN SEE THE CARD IN BROWSER I'LL UPDATE CSS IF NEEDED*/
     font-family: var(--anta);
     display: flex;
     justify-content: center;
-    margin-top: 10vh;
-    margin-bottom: 50vh;
-    margin-left: 70vh;
-    margin-right: 70vh;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    margin-left: 10vh;
+    margin-right: 10vh;
+}
+
+.card h2 {
+    margin-left: 20px;
+    margin-right: 40px;
+    font-size: 20px;
+}
+
+.card h3 {
+    margin-left: 20px;
+    margin-right: 40px;
+    font-size: 20px;
+}
+.card-image {
+    width: 300px;
+    
+}
+.card p {
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 /*CSS for footer*/

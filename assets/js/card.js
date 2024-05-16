@@ -2,7 +2,7 @@ const isBetween = window.dayjs_plugin_isBetween;
 dayjs.extend(isBetween);
 // this file will contain the JS for card.html
 const user = JSON.parse(localStorage.getItem('birthday'));
-const signs = JSON.parse(localStorage.getItem('zodiacSign'));
+const signs = JSON.parse(localStorage.getItem('zodiacsign'));
 
 console.log(signs);
 // Log the signs to the console for debugging purposes
@@ -30,11 +30,15 @@ const zodiacSigns = {
 };
 // Async function to get the user's zodiac sign based on their birthdate
 async function getZodiacSign() {
+    const signs = JSON.parse(localStorage.getItem('zodiacsign'));
     for (const sign in zodiacSigns) {
         const [startDate, endDate] = zodiacSigns[sign];
+
         if (dayjs(dayjs(user.birthday)).isBetween(startDate, endDate, 'day', '[]')) {
             console.log('sign', sign);
+            console.log('signs', signs[sign]);
             localStorage.setItem('sign', sign);
+            localStorage.setItem('horoscope', signs[sign].personality);
         }
     }
 }
@@ -44,41 +48,32 @@ function createCard() {
     console.log("hi");
     const userSign = localStorage.getItem("sign");
     const userFortune = localStorage.getItem("Fortune");
+    const userHoroscope = localStorage.getItem("horoscope");
     const userData = JSON.parse(localStorage.getItem('birthday'));
+
     console.log(userData);
     if (userData) {
         console.log("hello", userData);
         const cardHTML = `
         <div class="card">
-          <h2>${userData.username}</h2>
-           <p>${userSign}</p>
+          <div><h2>Hi,${userData.username}! Your sign is:</h2>
+          <h3>${userSign}</h3>
+          </div>
+          <img src="./assets/images/zodiacs/${userSign}_img.jpg" alt="User Image" class="card-image"/>        
+          <div><h3>Horoscope:</h3>
+          <p>${userHoroscope}</p>
+          </div>
+          <div><h3>Fortune:</h3>
           <p>${userFortune}</p>
+          </div>
         </div>
       `;
-<<<<<<< HEAD
-
-=======
-
-
-    //const icon = $('<img>').addClass('icon');
-    //icon.attr('src', './assets/images/zodiac sign images')
-
-    
-    //   document.getElementById('card-container').innerHTML = cardHTML;
-    
-
- 
-    // let horoscope = `<div class="card">
-            
-    //         <h2>${getZodiacSign()}</h2> 
->>>>>>> f0d9ae6b3e3812c9256e1fbddccef2cd3819b11b
 
         const fortuneElement = document.querySelector(".fortune-card");
 
         console.log(cardHTML);
 
         fortuneElement.innerHTML = cardHTML;
-
     }
 }
 
@@ -106,7 +101,6 @@ async function generateFortune() {
         console.error(error);
     }
 
-<<<<<<< HEAD
 
 }
 // Call the functions to generate the fortune 
@@ -114,11 +108,4 @@ generateFortune();
 //call the function to get the user's zodiac sign
 getZodiacSign();
 //call the function to create the card with user's zodiac sign and fortune
-=======
-    generateFortune();
-    getZodiacSign();
-
-
->>>>>>> f0d9ae6b3e3812c9256e1fbddccef2cd3819b11b
 createCard();
-
