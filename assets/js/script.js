@@ -46,6 +46,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+<<<<<<< HEAD
+=======
 
 // function testing() {
 //   const url = 'https://zodiac-sign-api1.p.rapidapi.com/all';
@@ -99,3 +101,4 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });   
 
+>>>>>>> f0d9ae6b3e3812c9256e1fbddccef2cd3819b11b

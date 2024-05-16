@@ -5,7 +5,7 @@ const user = JSON.parse(localStorage.getItem('birthday'));
 const signs = JSON.parse(localStorage.getItem('zodiacSign'));
 
 console.log(signs);
-
+// Log the signs to the console for debugging purposes
 const options = {
     method: 'GET',
     headers: {
@@ -13,7 +13,7 @@ const options = {
         'X-RapidAPI-Host': 'zodiac-sign-api1.p.rapidapi.com'
     }
 };
-
+// Define an object to store the zodiac signs and their corresponding date ranges
 const zodiacSigns = {
     'Aquarius': [dayjs('2024-01-20'), dayjs('2024-02-18')],
     'Pisces': [dayjs('2024-02-19'), dayjs('2024-03-20')],
@@ -28,7 +28,7 @@ const zodiacSigns = {
     'Sagittarius': [dayjs('2024-11-22'), dayjs('2024-12-21')],
     'Capricorn': [dayjs('2024-12-22'), dayjs('2025-01-19')]
 };
-
+// Async function to get the user's zodiac sign based on their birthdate
 async function getZodiacSign() {
     for (const sign in zodiacSigns) {
         const [startDate, endDate] = zodiacSigns[sign];
@@ -37,13 +37,8 @@ async function getZodiacSign() {
             localStorage.setItem('sign', sign);
         }
     }
-    // return null;
 }
-
-// Example usage:
-// getZodiacSign();
-
-// function to create the card and display the data
+// Function to create a card element with the user's information
 function createCard() {
 
     console.log("hi");
@@ -52,14 +47,17 @@ function createCard() {
     const userData = JSON.parse(localStorage.getItem('birthday'));
     console.log(userData);
     if (userData) {
-        console.log("hell0", userData);
-      const cardHTML = `
+        console.log("hello", userData);
+        const cardHTML = `
         <div class="card">
           <h2>${userData.username}</h2>
            <p>${userSign}</p>
           <p>${userFortune}</p>
         </div>
       `;
+<<<<<<< HEAD
+
+=======
 
 
     //const icon = $('<img>').addClass('icon');
@@ -73,75 +71,54 @@ function createCard() {
     // let horoscope = `<div class="card">
             
     //         <h2>${getZodiacSign()}</h2> 
+>>>>>>> f0d9ae6b3e3812c9256e1fbddccef2cd3819b11b
 
-    //         <h2>Fortune<h2>
-            
-    //         <p>${generateFortune()}</p>        
-    // </div>`
+        const fortuneElement = document.querySelector(".fortune-card");
 
-    const fortuneElement = document.querySelector(".fortune-card");
-    // const element = document.createElement('div')
-    // element.innerHTML = cardHTML;
-    console.log(cardHTML);
-    
-fortuneElement.innerHTML=cardHTML;
-    // document.body.main.appendChild(cardHTML);
-}
+        console.log(cardHTML);
+
+        fortuneElement.innerHTML = cardHTML;
+
+    }
 }
 
-// function to generate a fortune using a fortune API
+// Async function to generate a fortune using the Fortune Cookie API
 async function generateFortune() {
 
     const url = 'https://fortunecookie.p.rapidapi.com/api/v1/fortune';
-const options = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': '39d4e0a90dmsh7b651e8c7a3c32cp19dfa1jsn25d4bc166674',
-		'X-RapidAPI-Host': 'fortunecookie.p.rapidapi.com'
-	}
-};
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': '39d4e0a90dmsh7b651e8c7a3c32cp19dfa1jsn25d4bc166674',
+            'X-RapidAPI-Host': 'fortunecookie.p.rapidapi.com'
+        }
+    };
 
-try {
-	const response = await fetch(url, options);
-	const result = await response.text();
-    const fortune = JSON.parse(result);
-    
-	console.log(JSON.parse(result));
-    localStorage.setItem("Fortune",fortune.message);
-    
-} catch (error) {
-	console.error(error);
-}
+    try {
+        const response = await fetch(url, options);
+        const result = await response.text();
+        const fortune = JSON.parse(result);
 
-    // const options = {
-    //     method: 'GET',
-    //     url: 'https://fortunecookie.p.rapidapi.com/api/v1/fortune',
-    //     headers: {
-    //       'X-RapidAPI-Key': '39d4e0a90dmsh7b651e8c7a3c32cp19dfa1jsn25d4bc166674',
-    //       'X-RapidAPI-Host': 'fortunecookie.p.rapidapi.com'
-    //     }
-    //   };
-     
-    //   try {
-        // fetch ('https://fortunecookie.p.rapidapi.com/api/v1/fortune')
-        //   const response = fetch(url,options);
-        //   const data = response.json();
-        // .then (res => res.json())
-        // .then (data => {
-          
-        //   console.log(data);
-          
-        //   return data.fortune.message;
+        console.log(JSON.parse(result));
+        localStorage.setItem("Fortune", fortune.message);
 
-        //  }) catch (error) {
-        //   console.error(error);
-    //   });
-
+    } catch (error) {
+        console.error(error);
     }
 
+<<<<<<< HEAD
+
+}
+// Call the functions to generate the fortune 
+generateFortune();
+//call the function to get the user's zodiac sign
+getZodiacSign();
+//call the function to create the card with user's zodiac sign and fortune
+=======
     generateFortune();
     getZodiacSign();
 
 
+>>>>>>> f0d9ae6b3e3812c9256e1fbddccef2cd3819b11b
 createCard();
 
