@@ -36,6 +36,7 @@ function testing() {
     .then(data=>{
       console.log(data);
       localStorage.setItem("zodiacsign", JSON.stringify(data))
+      
     }) 
     .catch(err=>console.log(err))
 }
@@ -43,20 +44,15 @@ function testing() {
 testing();
 
 /*Add functionality for the trigger button */
+var triggerButtons = document.querySelector('.js-modal-trigger');
+triggerButtons.addEventListener('click', function() {
 
-document.addEventListener('DOMContentLoaded', function() {
-  var triggerButtons = document.querySelectorAll('.js-modal-trigger');
-
-  triggerButtons.forEach(function(button) {
-    button.addEventListener('click', function() {
-      var target = button.getAttribute('data-target');
-      var modal = document.getElementById(target);
-
+      var modal = document.getElementById('modal-js-button');
+  
       if (modal) {
-        modal.classList.remove('hidden'); // Remove the "hidden" class to show the modal
+        modal.classList.remove('hidden'); 
         modal.classList.add('is-active');
       }
-    });
   });
 
   // Close modal when close button is clicked
@@ -70,4 +66,4 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
-});   
+   
