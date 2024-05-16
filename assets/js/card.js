@@ -61,6 +61,7 @@ function createCard() {
         </div>
       `;
 
+
     //const icon = $('<img>').addClass('icon');
     //icon.attr('src', './assets/images/zodiac sign images')
 
@@ -68,6 +69,7 @@ function createCard() {
     //   document.getElementById('card-container').innerHTML = cardHTML;
     
 
+ 
     // let horoscope = `<div class="card">
             
     //         <h2>${getZodiacSign()}</h2> 
@@ -139,4 +141,7 @@ try {
 
     generateFortune();
     getZodiacSign();
+
+
 createCard();
+

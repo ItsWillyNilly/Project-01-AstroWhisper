@@ -1,19 +1,38 @@
 # Project-01-AstroWhisper
-
+This is Ritu's, Anna's, and William's first project on an Astrology gnenerator
 
 ## Challenge 
 
-Develop a web application that offers horoscope for users based on their date of birth. User can also find out their fortune for today.
+The challenge is to develop a web application that offers horoscope for users based on their date of birth. Users can also find out their fortune for the day. We created the application from scratch starting with the the basic conecptualization of what we wanted, to making a basic wireframe in Figma, to coding the apple 
 
 ## Solution
 
 The final app integrates astrology insights based on user's zodiac sign (particularly, user's moon sign).
 
+## User Story
+
+```
+AS An avid Astrology enthusiast
+I WANT AN astrology generator
+SO THAT I can obtain more information about Zodiac signs and recieve a fortune 
+```
+
+## Acceptance Criteria
+
+```
+GIVEN an astrology generator
+WHEN I click the "generate horoscope" button
+WHEN I finish adding my name and birthday
+THEN I click on submit
+THEN I am taken to another page
+WHERE I am presented with my Zodiac symbol with a brief description of sign and a fortune right below it
+```
+
 ## Design 
 
 1. Logoname & Background Image
 
-Our logoname "Astro Whisper" and backgroubd image perfectly capture the essence of our astrological web application. The primary goal is to create a unique design for entertaining application conserning horoscope to attract users.
+Our logoname "Astro Whisper" and background image perfectly capture the essence of our astrological web application. The primary goal is to create a unique design for entertaining application conserning horoscope to attract users.
 
 2. Screen of the web application
 
