@@ -46,24 +46,3 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
-
-// function testing() {
-//   const url = 'https://zodiac-sign-api1.p.rapidapi.com/all';
-//   const options = {
-// 	method: 'GET',
-// 	headers: {
-// 		'X-RapidAPI-Key': 'b3f4ad0488msh25707697dd3120ap175263jsnbbef9125d64d',
-// 		'X-RapidAPI-Host': 'zodiac-sign-api1.p.rapidapi.com'
-// 	}
-// };
-
-//   fetch(url, options)
-//   .then(response=>response.json())
-//     .then(data=>{
-//       console.log(data);
-//       localStorage.setItem("zodiacsign", JSON.stringify(data))
-//     }) 
-//     .catch(err=>console.log(err))
-// }
-
-// testing();
