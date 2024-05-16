@@ -55,7 +55,23 @@ function createCard() {
           <p>${userFortune}</p>
         </div>
       `;
+<<<<<<< HEAD
 
+=======
+
+
+    //const icon = $('<img>').addClass('icon');
+    //icon.attr('src', './assets/images/zodiac sign images')
+
+    
+    //   document.getElementById('card-container').innerHTML = cardHTML;
+    
+
+ 
+    // let horoscope = `<div class="card">
+            
+    //         <h2>${getZodiacSign()}</h2> 
+>>>>>>> f0d9ae6b3e3812c9256e1fbddccef2cd3819b11b
 
         const fortuneElement = document.querySelector(".fortune-card");
 
@@ -90,6 +106,7 @@ async function generateFortune() {
         console.error(error);
     }
 
+<<<<<<< HEAD
 
 }
 // Call the functions to generate the fortune 
@@ -97,4 +114,11 @@ generateFortune();
 //call the function to get the user's zodiac sign
 getZodiacSign();
 //call the function to create the card with user's zodiac sign and fortune
+=======
+    generateFortune();
+    getZodiacSign();
+
+
+>>>>>>> f0d9ae6b3e3812c9256e1fbddccef2cd3819b11b
 createCard();
+

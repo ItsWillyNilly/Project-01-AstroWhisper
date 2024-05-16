@@ -34,6 +34,22 @@ button {
     background-color: var(--dark-blue);    
 }
 
+/*CSS for card 
+WHEN SEE THE CARD IN BROWSER I'LL UPDATE CSS IF NEEDED*/
+.card {
+    background-color: var(--pink);
+    border-color: 40px var(--white);
+    color: var(--white);
+    font-size: 17px;
+    font-family: var(--anta);
+    display: flex;
+    justify-content: center;
+    margin-top: 10vh;
+    margin-bottom: 50vh;
+    margin-left: 70vh;
+    margin-right: 70vh;
+}
+
 /*CSS for footer*/
 .panel-footer {
     color: var(--white);
